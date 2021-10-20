@@ -10,6 +10,8 @@
         console.log(response.status);      
         if(response.status == '404') {
           alert('파일을 발견하지 못함');
+        } else if (response.status == '200') {
+          alert('정상적으로 로드 됨');
         }
       });
     ">
