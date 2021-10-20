@@ -1,5 +1,9 @@
 <!doctype html>
 <html>
+  <head lang="ko">
+    <meta charset="utf-8">
+    <title>fetch 예제 2</title>
+  </head>
   <body>
     <article>
  
@@ -13,11 +17,14 @@
       })
       */
       //Asynchronous
-      function callbackme() {
-        console.log(1);
-        console.log(2);
-      }
-      fetch('html').then(callbackme);
+      fetch('html').then(function(response) {
+        console.log(response.status);      
+        if(response.status == '404') {
+          alert('파일을 발견하지 못함');
+        } else if (response.status == '200') {
+          alert('정상적으로 로드 됨');
+        }
+      });
       console.log(3);
       console.log(4);
     ">
