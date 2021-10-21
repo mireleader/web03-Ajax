@@ -9,7 +9,7 @@
 <body>
   <!-- 표준 답안 -->
   <h1><a onclick="
-      fetch('web.html').then(function(response){
+      fetch('web').then(function(response){
         response.text().then(function(text){
           document.querySelector('article').innerHTML = text;
         })
@@ -20,21 +20,21 @@
   ">
   <ol>
     <li><a onclick="
-      fetch('html.html').then(function(response){
+      fetch('html').then(function(response){
         response.text().then(function(text){
           document.querySelector('article').innerHTML = text;
         })
       });
       ">HTML</a></li>
     <li><a onclick="
-      fetch('css.html').then(function(response){
+      fetch('css').then(function(response){
         response.text().then(function(text){
           document.querySelector('article').innerHTML = text;
         })
       });
       ">CSS</a></li>
     <li><a onclick="
-      fetch('javascript.html').then(function(response){
+      fetch('javascript').then(function(response){
         response.text().then(function(text){
           document.querySelector('article').innerHTML = text;
         })

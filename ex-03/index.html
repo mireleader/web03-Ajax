@@ -7,7 +7,7 @@
   <script src="colors.js"></script>
 </head>
 <body>
-  <!-- 링크된 WEB 텍스트를 클릭했을 때 'web.html' 파일 내용이
+  <!-- 링크된 WEB 텍스트를 클릭했을 때 'web' 파일 내용이
     <article></article> 부분에 출력되도록 코딩하세요.
   -->
   <h1><a href="index.html">WEB</a></h1>
@@ -16,21 +16,21 @@
   ">
   <ol>
     <li><a onclick="
-      fetch('html.html').then(function(response){
+      fetch('html').then(function(response){
         response.text().then(function(text){
           document.querySelector('article').innerHTML = text;
         })
       });
       ">HTML</a></li>
     <li><a onclick="
-      fetch('css.html').then(function(response){
+      fetch('css').then(function(response){
         response.text().then(function(text){
           document.querySelector('article').innerHTML = text;
         })
       });
       ">CSS</a></li>
     <li><a onclick="
-      fetch('javascript.html').then(function(response){
+      fetch('javascript').then(function(response){
         response.text().then(function(text){
           document.querySelector('article').innerHTML = text;
         })
