@@ -7,14 +7,14 @@
   <script src="colors.js"></script>
 </head>
 <body>  
-  <h1><a href="#!web" onclick="fetchPage('web.html')">WEB</a></h1>
+  <h1><a href="#!web" onclick="fetchPage('web')">WEB</a></h1>
   <input id="night_day" type="button" value="night" onclick="
     nightDayHandler(this);
   ">
   <ol>
-    <li><a href="#!html" onclick="fetchPage('html.html')">HTML</a></li>
-    <li><a href="#!css" onclick="fetchPage('css.html')">CSS</a></li>
-    <li><a href="#!javascript" onclick="fetchPage('javascript.html')">javascript</a></li>
+    <li><a href="#!html" onclick="fetchPage('html')">HTML</a></li>
+    <li><a href="#!css" onclick="fetchPage('css')">CSS</a></li>
+    <li><a href="#!javascript" onclick="fetchPage('javascript')">javascript</a></li>
   </ol>
   <article>
 
@@ -28,13 +28,13 @@
       });
     }
     /* fetchPage 함수를 이용하여
-       만약 입력 주소에 #태그가 있다면 해당 페이지를 로드하고,
-       만약 입력 주소에 #태그가 없다면 welcome.html 파일을 로드하도록 코딩하세요.
+       만약 입력 주소에 #태그가 있다면 해당 파일 내용을 로드하여 출력하고,
+       만약 입력 주소에 #태그가 없다면 welcome 파일 내용을 로드하여 출력하도록 코딩하세요.
     */
     if (location.hash) {
       fetchPage(location.hash.substr(2));
     } else {
-      fetchPage('welcome.html');
+      fetchPage('welcome');
     }
   </script>
 </body>
