@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+  <title>WEB1 - Welcome</title>
+  <meta charset="utf-8">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="colors.js"></script>
+</head>
+<body>  
+  <h1><a href="#!web" onclick="fetchPage('web')">WEB</a></h1>
+  <input id="night_day" type="button" value="night" onclick="
+    nightDayHandler(this);
+  ">
+  <!--
+    1. <li>Ajax</li>를 마지막 리스트에 추가하세요.
+    2. 외부에 ajax 파일을 생성하세요.
+    3. ajax 파일에 임의의 내용을 추가하고, fetchPage() 함수를 적용하세요.
+    4. <li></li> 태그 부분은 'list'라는 외부 파일로 만드세요.
+    5. <ol> 태그의 id 값을 'nav'로 지정하세요.
+  -->
+  <ol>
+    <li><a href="#!html" onclick="fetchPage('html')">HTML</a></li>
+    <li><a href="#!css" onclick="fetchPage('css')">CSS</a></li>
+    <li><a href="#!javascript" onclick="fetchPage('javascript')">javascript</a></li>
+  </ol>
+  <article>
+
+  </article>
+  <script>
+    function fetchPage(name) {
+      fetch(name).then(function(response){
+        response.text().then(function(text){
+          document.querySelector('article').innerHTML = text;
+        })
+      });
+    }
+    if (location.hash) {
+      fetchPage(location.hash.substr(2));
+    } else {
+      fetchPage('welcome');
+    }
+    /* fetch API를 이용하여
+    id=nav인 부분에 list 파일을 로드하여 출력하도록 코딩하세요.
+    */
+  </script>
+</body>
+</html>
