@@ -25,11 +25,14 @@
         })
       });
     }
+
     if (location.hash) {
       fetchPage(location.hash.substr(2));
     } else {
       fetchPage('welcome');
     }
+    
+    //이 부분에 while 반복문과 배열을 사용하여, id="nav" 부분에 정상적으로 출력하도록 코딩하세요.
     fetch('list').then(function(response){
       response.text().then(function(text){
         var items = text.split(',');
